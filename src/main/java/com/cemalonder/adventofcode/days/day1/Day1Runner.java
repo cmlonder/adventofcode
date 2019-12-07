@@ -27,17 +27,17 @@ public class Day1Runner {
   private static void part1(List<Module> modules) {
     final Day1 day1 = new Day1();
     final Integer cost = day1.calculate(modules);
-    logger.info("{}: Cost: {}", day1.getClass().getSimpleName(), cost);
+    logger.info("{} - Cost: {}", day1.getClass().getSimpleName(), cost);
   }
 
   private static void part2(List<Module> modules) {
     final Day1 day1 = new Day1();
     final Integer massCost = day1.calculateMass(modules);
-    logger.info("{}: MassCost: {}", day1.getClass().getSimpleName(), massCost);
+    logger.info("{} - MassCost: {}", day1.getClass().getSimpleName(), massCost);
   }
 
   private static List<Module> readModules() {
-    final String file = "./days/day1/input.txt";
+    final String file = "days/day1-input.txt";
     final InputStream inputFile = Day1Runner.class.getClassLoader().getResourceAsStream(file);
     final List<Module> modules = new ArrayList<>();
     try (BufferedReader reader = new BufferedReader(new InputStreamReader(inputFile))) {
